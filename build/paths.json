@@ -1,0 +1,14 @@
+{
+    "styles": {
+        "src": "src/assets/scss/**/*.scss",
+        "dest": "site/assets/css/"
+    },
+    "scripts": {
+        "src": "src/assets/js/**/*.js",
+        "dest": "site/assets/js/"
+    },
+    "views": {
+        "src": "src/views/**/*.twig",
+        "dest": "site/**/*.html"
+    }
+}

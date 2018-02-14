@@ -1,0 +1,27 @@
+title: I Am Downtown Windsor | Plan Your Night With Us!
+slogan: Plan Your Night With Us!
+companies:
+  one:
+    logo: http://res.cloudinary.com/darkroast-digital/image/upload/v1516301581/iamdowntownwindsor.com/pub-club.png
+    name: The Pubclub Whiskey House
+    url: http://thepubclubwindsor.com/
+    slogan: Nightclub & Bar With A Private 2nd Level VIP Area
+    facebook: https://www.facebook.com/PubClubWindsor/
+    instagram: https://www.instagram.com/pubclubwindsor/
+    color: EF652F
+  two:
+    logo: http://res.cloudinary.com/darkroast-digital/image/upload/v1516301581/iamdowntownwindsor.com/bull-and-barrel.png
+    name: The Bull & Barrel
+    url: http://bullandbarrel.com/
+    slogan: Country Themed Restaurant & Nightclub With A Large Patio & Mechanical Bull
+    facebook: https://www.facebook.com/bullandbarrel/
+    instagram: https://www.instagram.com/bullandbarrel/
+    color: FC0D1B
+  three:
+    logo: http://res.cloudinary.com/darkroast-digital/image/upload/v1516301581/iamdowntownwindsor.com/level.png
+    name: Lev3l Vodka Emporium
+    url: http://level3windsor.com/
+    slogan: Trendy & Upscale Nightclub With Bottle Service & Booth Reservations
+    facebook: https://www.facebook.com/level3windsor/
+    instagram: https://www.instagram.com/level3windsor/
+    color: EF2DFA

@@ -1,0 +1,82 @@
+{% extends 'layouts/master.twig' %}
+
+{% block content %}
+
+<nav>
+    <ul class="navbar">
+        <li><a href="http://thepubclubwindsor.com/" class="hidden-mobile" target="_blank">The Pubclub</a></li>
+        <li><a href="http://bullandbarrel.com/" class="hidden-mobile" target="_blank">The Bull and Barrel</a></li>
+        <li><a href="http://level3windsor.com/" class="hidden-mobile" target="_blank">L3vel Vodka Emporium</a></li>
+        <li><a href="#0" class="modalTrigger">Contact Us</a></li>
+    </ul>
+</nav>
+
+<header>
+    <img src="http://res.cloudinary.com/darkroast-digital/image/upload/v1516301584/iamdowntownwindsor.com/logo.png" alt="I am Downtown Windsor.com" draggable="false">
+    <h1>{{ slogan }}</h1>
+    <h5><a href="#0" class="modalTrigger"><strong>Click Here</strong></a> To Plan Your Night Or Visit The Links Below</h5>
+</header>
+
+<section class="content">
+    <ul class="companies container">
+        {% for item in companies %}
+            <li class="company column-4">
+                <img src="{{ item.logo }}" alt="{{ item.name }}" draggable="false">
+                <h6>{{ item.name }}</h6>
+                <p>{{ item.slogan }}</p>
+                <a href="{{ item.url }}" class="button is-small" style="background: #{{ item.color }};border-color: #{{ item.color }};" target="_blank">Click Here For More Information</a>
+                <ul class="socials">
+                    <li><a href="{{ item.facebook }}" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="{{ item.instagram }}" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                </ul>
+            </li>
+        {% endfor %}
+    </ul>
+</section>
+
+<div class="modal">
+    <div class="modalClose">&times;</div>
+    <div class="block">
+        <h6>Plan Your Night!</h6>
+        <hr>
+        <form action="MailController.php" method="post" class="form">
+            <div class="form-row">
+                <div class="field">
+                    <label for="contact-name">Contact Name</label>
+                    <input type="text" name="contact-name">
+                </div>
+                <div class="field">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" name="phone">
+                </div>
+                <div class="field">
+                    <label for="email">Email</label>
+                    <input type="email" name="email">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="field">
+                    <label for="group-name">Group Name</label>
+                    <input type="text" name="group-name">
+                </div>
+                <div class="field">
+                    <label for="party-date">Party Date</label>
+                    <input type="date" name="party-date">
+                </div>
+                <div class="field">
+                    <label for="size-of-party">Size of Party</label>
+                    <input type="number" name="size-of-party">
+                </div>
+            </div>
+            <div class="field">
+                <label for="help">How Can We Help?</label>
+                <textarea name="help"></textarea>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+
+<div class="overlay"></div>
+
+{% endblock %}

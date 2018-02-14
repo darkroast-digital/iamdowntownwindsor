@@ -1,0 +1,173 @@
+/*
+|--------------------------------------------------------------------------
+| #THEME
+|--------------------------------------------------------------------------
+*/
+
+
+#app {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    background: color(secondary) url('http://res.cloudinary.com/darkroast-digital/image/upload/v1516301585/iamdowntownwindsor.com/bg.jpg');
+    background-size: cover;
+
+    @include breakpoint(md) {
+        overflow: scroll;
+    }
+}
+
+.hidden-mobile {
+
+    @include breakpoint(md) {
+        display: none;
+    }
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to right, color(black), color(secondary), color(black));
+
+    @include breakpoint(md) {
+        position: relative;
+    }
+
+    ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+
+        li,
+        a {
+            display: block;
+            height: 100%;
+            margin-bottom: 0;
+        }
+
+        a {
+            padding: $gutter * .75 $gutter * 2;
+            color: color(grey-40);
+            font-size: .9rem;
+            text-decoration: none;
+        }
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: color(white);
+}
+
+h1 {
+    font-family: $font-body;
+    text-transform: uppercase;
+}
+
+header {
+    width: 100vw;
+    text-align: center;
+    margin-top: $gutter * 3;
+
+    @include breakpoint(md) {
+        margin-top: $gutter;
+    }
+
+    img {
+        max-width: 50%;
+
+        @include breakpoint(md) {
+            max-width: 100%;
+        }
+    }
+
+    h1 {
+        margin-bottom: 0;
+    }
+
+    h5 {
+        font-weight: normal;
+        font-style: italic;
+
+        a {
+            color: color(white);
+            text-decoration: none;
+        }
+    }
+}
+
+.companies {
+    display: flex;
+
+    li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    img {
+        max-width: 300px;
+        max-height: 175px;
+    }
+
+    h6 {
+        font-family: $font-body;
+        text-transform: uppercase;
+        margin-bottom: 0;
+    }
+
+    p {
+        font-family: $font-display;
+        font-style: italic;
+        color: color(white);
+        font-size: .9rem;
+        max-width: 75%;
+        margin: 0 auto 1rem;
+    }
+}
+
+.socials {
+    display: flex;
+    width: 25%;
+    justify-content: space-between;
+    margin-top: 1rem;
+
+    a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 30px;
+        width: 30px;
+        background: rgba(color(grey-50), .75);
+        color: color(secondary);
+        text-decoration: none;
+        border-radius: radius(circle);
+    }
+}
+
+.modal {
+
+    &Close {
+        position: absolute;
+        top: $gutter;
+        right: $gutter;
+        color: color(white);
+        font-size: ms(6);
+        cursor: pointer;
+        pointer-events: none !important;
+    }
+
+    .block {
+        max-height: 80%;
+        overflow: scroll;
+    }
+
+    h6 {
+        color: color(display);
+        font-family: $font-body;
+    }
+}
